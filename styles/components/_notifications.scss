@@ -1,0 +1,15 @@
+.notification-info {
+    @include notification($info-bg-color, $info-text-color, $info-content-color);
+}
+
+.notification-success {
+    @include notification($success-bg-color, $success-text-color, $success-content-color);
+}
+
+.notification-danger {
+    @include notification($danger-bg-color, $danger-text-color, $danger-content-color);
+}
+
+.notification-warning {
+    @include notification($warning-bg-color, $warning-text-color, $warning-content-color);
+}

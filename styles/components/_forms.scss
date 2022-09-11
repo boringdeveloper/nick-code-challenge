@@ -1,0 +1,86 @@
+.form-group {
+    label {
+        display: block;
+        font-size: 14px;
+        font-weight: 600;
+        margin-bottom: 8px;
+        color: $color-form-text-default;
+    }
+
+    .form-control {
+        @include form-control;
+    }
+
+    .form-input {
+        display: inline-flex;
+        border-radius: 8px;
+        border: none;
+
+        &.form-control-block {
+            display: flex;
+
+            .form-control {
+                width: 100%;
+            }
+        }
+
+        // reset input styles
+        &.prefix, &.suffix {
+            border: 1.5px solid $color-default;
+            .form-control {
+                border: none;
+            }
+    
+            .addon {
+                color: $color-form-text-default;
+                font-size: 1.2em;
+                padding: 0 16px;
+                display: flex;
+                align-items: center;
+
+                .icon {
+                    color: $color-form-text-default;
+                    width: auto;
+                    height: 1.2em !important;
+                }
+            }
+        }
+
+        &.prefix {
+            .form-control {
+                border-radius: 0px 8px 8px 0px;
+            }
+    
+            .addon {
+                border-radius: 8px 0px 0px 8px;
+            }
+        }
+    
+        &.suffix {
+            .form-control {
+                border-radius: 8px 0px 0px 8px;
+            }
+    
+            .addon {
+                border-radius: 0px 8px 8px 0px;
+
+                &.separated {
+                    background-color: $color-form-addon-bg;
+                    border-left: 1.5px solid $color-default;
+                }
+            }
+        }
+
+        &.action {
+            .form-control {
+                border-top-right-radius: 0;
+                border-bottom-right-radius: 0;
+            }
+            
+            button {
+                border-top-left-radius: 0;
+                border-bottom-left-radius: 0;
+            }
+        }
+    }
+}

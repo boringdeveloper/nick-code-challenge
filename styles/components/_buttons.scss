@@ -1,0 +1,104 @@
+
+
+.btn-primary {
+    @include btn;
+    @include btn-solid($color-primary);
+}
+
+.btn-secondary {
+    @include btn;
+    @include btn-solid($color-secondary)
+}
+
+.btn-danger {
+    @include btn;
+    @include btn-solid($color-danger);
+}
+
+.btn-primary, .btn-secondary, .btn-danger {
+    &:disabled {
+        @include btn-solid($color-disabled);
+        cursor: not-allowed;
+    }
+}
+
+.btn-outline-default {
+    @include btn;
+    @include btn-outline($color-default, $color-default-content);
+
+    &:active {
+        background-color: $color-active;
+    }
+}
+
+.btn-outline-primary {
+    @include btn;
+    @include btn-outline($color-primary, $color-primary)
+}
+
+.btn-outline-secondary {
+    @include btn;
+    @include btn-outline($color-secondary, $color-secondary)
+}
+
+.btn-outline-danger {
+    @include btn;
+    @include btn-outline($color-danger, $color-danger)
+}
+
+.btn-outline-primary, .btn-outline-secondary, .btn-outline-danger {
+    &:disabled {
+        @include btn-outline($color-disabled, $color-disabled);
+        cursor: not-allowed;
+    }
+}
+
+.btn-transparent-default {
+    @include btn;
+    @include btn-transparent($color-default);
+}
+
+.btn-rounded {
+    @include rounded;
+}
+
+// Button Sizes
+
+.btn-small {
+    padding: 5px 15px !important;
+}
+
+// Icon Button
+
+.icon-button {
+    @include btn;
+    @include btn-transparent($color-default);
+    padding: 5px 15px;
+
+    .btn-icon {
+        width: auto;
+        height: 1.5em !important;
+    }
+}
+
+// Button Group
+
+.btn-group {
+    display: inline-block;
+
+    button {
+        border-radius: 0;
+
+        &:not(:last-child) {
+            border-right: 0;
+        }
+
+        &:first-child {
+            border-radius: 8px 0 0 8px;
+        }
+        
+        &:last-child {
+            border-radius: 0 8px 8px 0;
+        }
+    }
+}

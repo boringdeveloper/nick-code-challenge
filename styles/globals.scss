@@ -1,0 +1,62 @@
+@import './utilities/variables';
+@import './utilities/mixins';
+
+// Components
+@import './components/notifications';
+@import './components/buttons';
+@import './components/forms';
+
+// Global Styles
+html,
+body {
+  padding: 16px;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.section-title {
+  font-weight: 400;
+}
+
+// Margins
+
+.my-1 {
+  margin-top: 0.75em;
+  margin-bottom: 0.75em;
+}
+
+.ml-1 {
+  margin-left: 0.75em;
+}
+
+.mr-1 {
+  margin-right: 0.75em;
+}
+
+.mt-1 {
+  margin-top: 0.75em;
+}
+
+.mb-1 {
+  margin-bottom: 0.75em;
+}
+
+.row {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.col {
+  width: 50%;
+  padding: 8px;
+
+  @media screen and (max-width: 1000px) {
+    width: 100%;
+  }
+}
